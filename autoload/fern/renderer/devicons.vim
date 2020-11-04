@@ -74,11 +74,12 @@ function! s:get_node_symbol(node) abort
   else
     let symbol = g:DevIconsDefaultFolderOpenSymbol
   endif
-  return symbol . '  '
+  return symbol . g:fern#renderer#devicons#padding
 endfunction
 
 call s:Config.config(expand('<sfile>:p'), {
       \ 'leading': ' ',
+      \ 'padding': ' ',
       \ 'marked_symbol': '✓  ',
       \ 'unmarked_symbol': '   ',
       \})
